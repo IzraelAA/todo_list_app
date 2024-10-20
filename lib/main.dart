@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:todo_list_app/feature/auth/presentation/pages/splash_screen.dart';
 import 'package:todo_list_app/feature/home/data/data_sources/api_service.dart';
 import 'package:todo_list_app/feature/home/data/repositories/post_repository.dart';
 import 'package:todo_list_app/feature/home/domain/use_cases/create_post.dart';
@@ -8,7 +9,6 @@ import 'package:todo_list_app/feature/home/domain/use_cases/get_post_by_id.dart'
 import 'package:todo_list_app/feature/home/domain/use_cases/get_posts.dart';
 import 'package:todo_list_app/feature/home/domain/use_cases/update_post.dart';
 import 'package:todo_list_app/feature/home/presentation/manager/post_provider.dart';
-import 'package:todo_list_app/feature/home/presentation/pages/home_page.dart';
 
 void main() {
   final apiService = ApiService();
@@ -63,7 +63,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: HomePage(),
+        home: const SplashScreen(),
       ),
     );
   }
