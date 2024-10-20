@@ -52,6 +52,7 @@ class HomePage extends StatelessWidget {
             title: Text(post.title),
             subtitle: Text(post.body),
             onTap: () {
+              postProvider.fetchPostById(post.id);
               Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (context) => PostDetailPage(postId: post.id),
